@@ -28,7 +28,26 @@ The [model_1.csv](/SVCR/model_1.csv) file consists of two columns, true and pred
 * Update the Java program to calculate the MSE, MAE, and MARE for all the data stored in the [model_1.csv](/SVCR/model_1.csv) file.
 * Repeat the metrics evaluation for the validation results from the [model_2.csv](/SVCR/model_2.csv) and [model_3.csv](/SVCR/model_3.csv) files.
 * Figure out the model with the lower error and recommend it.
-  
+
+### Rsults:
+<pre>
+for model_1.csv
+        MSE =112.09929
+        MAE =8.447413
+        MARE =0.12452688
+for model_2.csv
+        MSE =102.97186
+        MAE =8.1291275
+        MARE =0.119408615
+for model_3.csv
+        MSE =410.53354
+        MAE =16.090708
+        MARE =0.23739375
+According to MSE, The best model is model_2.csv
+According to MAE, The best model is model_2.csv
+According to MARE, The best model is model_2.csv
+</pre>
+
 ## 2. Single-variable Binary Regression Problem
 It's similar to the single-variable continuous regression problem except that the output variable has two values: either zero or one,  $`y \in \{0,1\}`$. The estimated variable has a continuous value between 0 and 1, $`\hat{y}=p(y|x)=f_{\Theta}(\mathbf{x}) \in [0,1]`$. By applying a threshold, the value can be converted into a binary value.
 
@@ -102,25 +121,6 @@ and the following line to execute the program
 java -jar target/SVBR-1.0.0-jar-with-dependencies.jar
 ```
 The [model_1.csv](/SVBR/model_1.csv) file consists of two columns, true and predicted. Those are the validation results of an ML model. The [/SVBR](/SVBR) folder also contains the validation results of two other models in [model_2.csv](/SVBR/model_2.csv) and  [model_3.csv](/SVBR/model_3.csv).
-
-### Rsults:
-<pre>
-for model_1.csv
-        MSE =112.09929
-        MAE =8.447413
-        MARE =0.12452688
-for model_2.csv
-        MSE =102.97186
-        MAE =8.1291275
-        MARE =0.119408615
-for model_3.csv
-        MSE =410.53354
-        MAE =16.090708
-        MARE =0.23739375
-According to MSE, The best model is model_2.csv
-According to MAE, The best model is model_2.csv
-According to MARE, The best model is model_2.csv
-</pre>
 
 ### Task 2:
 * Update the Java program to calculate the BCE, confusion matrix, Accuracy, Precision, Recall, $F1_{\text{score}}$, and AUC-ROC for all the data stored in the [model_1.csv](/SVBR/model_1.csv) file.
